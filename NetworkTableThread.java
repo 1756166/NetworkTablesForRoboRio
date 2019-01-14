@@ -5,9 +5,6 @@ public class NetworkTableThread implements Runnable{
         new Thread(this, "REEEEEEEEEEE").start();
     }
     private boolean flag = false;
-    // Put methods for controlling this subsystem
-    // here. Call these from Commands.
-
     private synchronized void Answer(String msg) {
         if (!flag) {
             try {
@@ -16,7 +13,6 @@ public class NetworkTableThread implements Runnable{
                 e.printStackTrace();
             }
         }
-
         System.out.println(msg);
         flag = false;
         notify();
